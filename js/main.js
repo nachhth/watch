@@ -66,13 +66,13 @@ setInterval(() => {
 
   body.classList.add('night');
 
-  if (getCurrentTime().hour > 7) {
+  if (getCurrentTime().hour >= 7) {
     body.classList.replace('night', 'morning');
   }
-  if (getCurrentTime().hour > 12) {
+  if (getCurrentTime().hour >= 13) {
     body.classList.replace('morning', 'afternoon');
   }
-  if (getCurrentTime().hour > 21) {
+  if (getCurrentTime().hour >= 21) {
     body.classList.replace('afternoon', 'night');
   }
 }, 1000);
